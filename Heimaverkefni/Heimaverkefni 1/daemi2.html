@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="app">
+		
+		<form action="https://www.google.is/search?">
+			<input class="input" type="text" v-model="search" placeholder="Google">
+			<input type="hidden" name="q" v-bind:value="'' + search">
+			<button class="button" type="submit">Search</button>
+		</form>
+
+	</div>
+	<script src="https://unpkg.com/vue"></script>
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#app', 
+			data: {
+				search: '',
+
+			}
+		});
+		
+	</script>
+
+</body>
+</html>

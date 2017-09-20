@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="app">
+		
+		<form>
+			<input class="input" type="text" v-model="search" placeholder="Google">
+		</form>
+
+		<a v-if="search === ''" v-bind:href="'https://www.google.is/search?q=' + search" id="black">>>Click Here To Search<<</a>
+
+		<a v-else v-bind:href="'https://www.google.is/search?q=' + search" id="red">>>Click Here To Search<<</a>
+
+
+	</div>
+	<script src="https://unpkg.com/vue"></script>
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#app', 
+			data: {
+				search: '',
+
+			}
+		});
+		
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+.input:focus { 
+    border-color: #FF6347;
+    box-shadow: 0 0 10px #719ECE;
+    outline:none;
+}
+
+input[type=text] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid #D3D3D3 ;
+}
+
+#black{
+    color: black;
+}
+
+#red{
+    color: #FF6347;
+}
+.button {
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px; 
+    background-color: #1E90FF;
+    color: white;
+
+}
