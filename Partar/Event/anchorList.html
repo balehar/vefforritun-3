@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id="app">
+		<p v-for="anchor in anchors">
+
+			<a :href="anchor.anchor" @click.prevent="handleClick(anchor)">{{anchor.anchor}}</a>
+
+			
+		</p>
+
+		<p>Virkur linkur er: {{virkurLinkur}}</p>
+		
+
+	</div>
+
+	<script src="https://unpkg.com/vue"></script>
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#app', 
+			data: {
+
+				virkurLinkur: "",
+
+				anchors: [
+					{anchor: 'https://google.is'},
+					{anchor: 'http://visir.is'},
+					{anchor: 'http://fotbolti.net'},
+					{anchor: 'https://facebook.com'}
+				],
+
+
+			},
+			methods: {
+				addTask: function() {
+					this.tasks.push(this.task);
+					this.task ='';
+				},
+
+				handleClick: function(anchor) {
+					this.virkurLinkur = anchor.anchor;
+				}
+
+			}
+		});
+		
+	</script>
+
+</body>
+</html>
