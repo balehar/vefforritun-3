@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.primary {
+			font-weight: bold;
+			color: red;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="app">
+		<input type="checkbox" id="checkbox" v-model="isPrimary">
+		<label for="checkbox">haka við</label>
+		<p v-bind:class="{ primary: isPrimary }">æalsdvfdkh</p>
+	</div>
+
+	<script src="https://unpkg.com/vue"></script>
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#app', 
+			data: {
+				isPrimary: false
+			}
+		});
+		
+	</script>
+
+</body>
+</html>
