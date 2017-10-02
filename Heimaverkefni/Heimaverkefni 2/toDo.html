@@ -24,7 +24,9 @@
 
 	      <input type="checkbox" class="checkbox" v-model="task.checked">
 
-	      <label for="checkbox">{{ task.text }}</label>
+	      <label v-if="task.edit === false" v-on:click="task.edit = true" for="checkbox">{{ task.text }}</label>
+
+	      <input class="text-input" v-if="task.edit === true" type="text" v-bind:value="task.text" v-model="task.text" autofocus v-on:keyup.enter="task.edit = false">
 
 	      <button class="delete" v-on:click="removeTask(task)">X</button>
 

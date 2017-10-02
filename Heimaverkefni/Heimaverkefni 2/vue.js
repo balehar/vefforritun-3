@@ -27,7 +27,8 @@ new Vue({
 		  //Push an object containing the task to the taskList array
 		  this.taskList.push({
 		    text: task,
-		    checked: false
+		    checked: false,
+		    edit: false
 		});
 		  //Reset newTask to an empty string so the input field is cleared
 		  this.newTask = "";
