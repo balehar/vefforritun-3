@@ -1,7 +1,12 @@
 <template>
   <div id="app" >
-    <div class="column is-1 is-offset-3" v-for="">
-      <input type="radio" name="companyName">
+    <div class="column is-1 is-offset-3" >
+      <input type="radio" id="one" value="N1" v-model="filterCompanyName">
+      <label for="one">One</label>
+      <br>
+      <input type="radio" id="two" value="Two" v-model="filterCompanyName">
+      <label for="two">Two</label>
+      <br>
 
     </div>
     <div class="box column is-6 is-offset-3" v-for="gasStation in sortedGasStations">
@@ -19,7 +24,8 @@ export default {
   data () {
     return {
       gasStations: [],
-      maxBensinVerd: 300,
+      filterCompanyName: ""
+
     }
   },
   computed: {
@@ -29,7 +35,7 @@ export default {
       });
 
       sorted = sorted.filter(function(gasStation) {
-        return gasStation.bensin95 < this.maxBensinVerd;
+        return gasStation.company = this.filterCompanyName;
       }.bind(this));
       return sorted;
     }
@@ -44,7 +50,8 @@ export default {
     .catch(function (error) {
       console.log(error);
     });
-  },
+  }
+  
 }
 </script>
 
