@@ -1,3 +1,23 @@
+Vue.component('v-task', {
+	template: `<ul class="list">
+
+	    <li v-for="task in taskList" v-bind:class="{done: task.checked}">
+
+	      <input type="checkbox" class="checkbox" v-model="task.checked">
+
+	      <label v-if="task.edit === false" v-on:click="task.edit = true" for="checkbox">{{ task.text }}</label>
+
+	      <input class="text-input" v-if="task.edit === true" type="text" v-bind:value="task.text" v-model="task.text" autofocus v-on:keyup.enter="task.edit = false">
+
+	      <button class="delete" v-on:click="removeTask(task)">X</button>
+
+	    </li>
+
+	  </ul>`
+});
+
+
+
 new Vue({
 
   
