@@ -144,7 +144,7 @@ export default {
   }
 
   .box:hover {
-    color: black;
+    color: red;
   }
 
   .level-right {
